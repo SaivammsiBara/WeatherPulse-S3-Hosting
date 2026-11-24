@@ -29,7 +29,7 @@ A responsive global weather dashboard built with HTML, CSS and JavaScript. Weath
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/WeatherPulse.git
+   git clone https://github.com/Vamsibara9/WeatherPulse-S3-Hosting.git
    ```
 
 2. Navigate into the project:
