@@ -73,7 +73,7 @@ WeatherPulse/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Vamsibara9/WeatherPulse-S3-Hosting.git
+git clone https://github.com/SaivammsiBara/WeatherPulse-S3-Hosting.git
 ```
 
 ### 2. Navigate to the project directory
@@ -220,6 +220,6 @@ Only intended website files should be publicly accessible. Never store credentia
 
 **Saivammsi**
 
-GitHub: [Vamsibara9](https://github.com/Vamsibara9)
+GitHub: [SaivammsiBara](https://github.com/SaivammsiBara)
 
-Repository: [WeatherPulse — S3 Hosting](https://github.com/Vamsibara9/WeatherPulse-S3-Hosting)
+Repository: [WeatherPulse — S3 Hosting](https://github.com/SaivammsiBara/WeatherPulse-S3-Hosting)
