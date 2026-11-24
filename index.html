@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="WeatherPulse - Global weather monitoring and forecasting dashboard">
+    <meta name="theme-color" content="#101820">
+
+    <title>WeatherPulse | Global Weather Intelligence</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css?v=2">
+
+    <!-- Leaflet map stylesheet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="anonymous"
+    >
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                W<span>P</span>
+            </div>
+
+            <button class="tool active" title="Global Weather" type="button">◉</button>
+            <button class="tool" title="Temperature" type="button">♨</button>
+            <button class="tool" title="Clouds" type="button">☁</button>
+            <button class="tool" title="Wind" type="button">≋</button>
+            <button class="tool" title="Settings" type="button">⚙</button>
+
+            <div class="sidebar-bottom">
+                <button class="tool" title="Help" type="button">?</button>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <!-- HEADER -->
+            <header class="topbar">
+
+                <div>
+                    <h1>Global Weather Intelligence</h1>
+                    <p>Real-time atmospheric conditions across the planet</p>
+                </div>
+
+                <div class="top-actions">
+
+                    <div class="live-indicator">
+                        <span></span>
+                        LIVE DATA
+                    </div>
+
+                    <button class="location-btn" id="locateBtn" type="button">
+                        My Location
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- GLOBAL WEATHER MAP -->
+            <section class="map-section">
+
+                <div id="map"></div>
+
+                <!-- CITY SEARCH -->
+                <div class="map-search">
+
+                    <input
+                        type="text"
+                        id="cityInput"
+                        placeholder="Search city or location..."
+                        autocomplete="off"
+                    >
+
+                    <button id="searchBtn" type="button">
+                        Search
+                    </button>
+
+                </div>
+
+                <!-- MAP LAYERS -->
+                <div class="map-controls">
+
+                    <button class="layer-btn active" id="temperatureLayer" type="button">
+                        Temperature
+                    </button>
+
+                    <button class="layer-btn" id="rainLayer" type="button">
+                        Rain
+                    </button>
+
+                    <button class="layer-btn" id="windLayer" type="button">
+                        Wind
+                    </button>
+
+                </div>
+
+                <!-- MAP LEGEND -->
+                <div class="map-legend">
+
+                    <p>Temperature</p>
+                    <div class="legend-gradient"></div>
+
+                    <div class="legend-labels">
+                        <span>Cold</span>
+                        <span>Moderate</span>
+                        <span>Hot</span>
+                    </div>
+
+                </div>
+
+                <!-- STATUS -->
+                <div
+                    class="status-message"
+                    id="statusMessage"
+                    aria-live="polite"
+                >
+                    Initializing WeatherPulse...
+                </div>
+
+            </section>
+
+            <!-- SELECTED CITY WEATHER -->
+            <section class="weather-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <div class="eyebrow">SELECTED LOCATION</div>
+                        <h2 id="cityName">Loading location...</h2>
+                    </div>
+
+                    <div class="weather-condition" id="condition">
+                        Loading weather...
+                    </div>
+
+                </div>
+
+                <!-- WEATHER METRICS -->
+                <div class="metrics">
+
+                    <div class="metric">
+                        <span>Temperature</span>
+                        <strong id="temperature">--°C</strong>
+                    </div>
+
+                    <div class="metric">
+                        <span>Feels Like</span>
+                        <strong id="feelsLike">--°C</strong>
+                    </div>
+
+                    <div class="metric">
+                        <span>Humidity</span>
+                        <strong id="humidity">--%</strong>
+                    </div>
+
+                    <div class="metric">
+                        <span>Wind Speed</span>
+                        <strong id="windSpeed">-- km/h</strong>
+                    </div>
+
+                    <div class="metric">
+                        <span>Pressure</span>
+                        <strong id="pressure">-- hPa</strong>
+                    </div>
+
+                    <div class="metric">
+                        <span>Precipitation</span>
+                        <strong id="precipitation">-- mm</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- SEVEN-DAY FORECAST -->
+            <section class="timeline-panel">
+
+                <div class="timeline-heading">
+                    <h2>7-Day Forecast</h2>
+                    <span id="forecastLocation">Selected location</span>
+                </div>
+
+                <div class="forecast-timeline" id="forecastTimeline">
+                    <!-- JavaScript inserts forecast cards here -->
+                </div>
+
+            </section>
+
+            <!-- FOOTER -->
+            <footer>
+                WeatherPulse Global Intelligence Dashboard
+                <br>
+                Weather data provided by Open-Meteo.
+                Map data © OpenStreetMap contributors.
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- LEAFLET MAP JAVASCRIPT -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- WEATHERPULSE APPLICATION -->
+    <script src="script.js?v=2"></script>
+
+</body>
+</html>
