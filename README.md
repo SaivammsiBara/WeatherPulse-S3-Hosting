@@ -1,4 +1,4 @@
-# WeatherPulse — Global Weather Dashboard
+## WeatherPulse — Global Weather Dashboard
 
 WeatherPulse is a responsive global weather dashboard built using HTML, CSS and JavaScript. It provides current weather information and a 7-day forecast for cities worldwide through an interactive map.
 
