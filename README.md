@@ -218,7 +218,7 @@ Only intended website files should be publicly accessible. Never store credentia
 
 ## Author
 
-**Saivammsi Bara**
+*** Saivammsi Bara ***
 
 GitHub: [SaivammsiBara](https://github.com/SaivammsiBara)
 
