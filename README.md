@@ -147,7 +147,7 @@ Upload these three files directly into the root of the S3 bucket:
 
 Do not upload the entire `src/` folder. The files must be at the bucket root so the website endpoint can locate the index document and its associated assets.
 
-** 3. Enable static website hosting**
+** 3. Enable static website hosting **
 
 - Open the bucket's Properties tab.
 - Navigate to Static website hosting.
@@ -156,7 +156,7 @@ Do not upload the entire `src/` folder. The files must be at the bucket root so 
 - Set the index document to `index.html`.
 - Save the configuration.
 
-** 4. Configure public access**
+** 4. Configure public access **
 
 For direct public S3 website hosting:
 
@@ -166,7 +166,7 @@ For direct public S3 website hosting:
 
 Only intended website files should be publicly accessible. Never store credentials or private information in the public bucket.
 
-** 5. Access the deployed website**
+** 5. Access the deployed website **
 
 - Navigate to Properties → Static website hosting.
 - Copy the Bucket website endpoint.
@@ -175,15 +175,15 @@ Only intended website files should be publicly accessible. Never store credentia
 
 ### AWS Deployment Screenshots
 
-** S3 Bucket Objects**
+** S3 Bucket Objects **
 
 ![S3 Bucket Objects](screenshots/s3-Objects.png)
 
-** S3 Static Website Hosting Configuration**
+** S3 Static Website Hosting Configuration **
 
 ![S3 Static Website Hosting](screenshots/s3-static-hosting-config.png)
 
-** Additional Hosting Configuration**
+** Additional Hosting Configuration **
 
 ![Additional S3 Configuration](screenshots/s3-static-hosting-config2.png)
 
